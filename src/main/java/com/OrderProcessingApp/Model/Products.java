@@ -6,13 +6,13 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @XmlRootElement(name = "products")
-public class ProductsDTO {
+public class Products {
     private List<Product> products;
 
-    public ProductsDTO() {
+    public Products() {
     }
 
-    public ProductsDTO(List<Product> products) {
+    public Products(List<Product> products) {
         this.products = products;
     }
 
