@@ -39,10 +39,11 @@ public class DirectoryWatcher {
                     Path eventPath = (Path) event.context();
                     //Creating the entire file path
                     Path filePath = path.resolve(eventPath);
+                    int orderNum = Integer.parseInt(eventPath.toString().replaceAll("[^\\d]", ""));
                     //Check if file has right pattern
                     boolean correctPattern = checkPattern(eventPath);
                     if(correctPattern){
-                        readXmlFile.read(filePath.toString());
+                        readXmlFile.read(filePath.toString(), orderNum);
                     }
                 }
                 key.reset();

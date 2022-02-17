@@ -13,9 +13,10 @@ public class OrderProcessingApp {
 
     public static void main(String[] args) throws InterruptedException, IOException {
         String directoryPath = "../SacomOrdersProcessing/src/main/resources/input/";
+        String outputDirPath = "../SacomOrdersProcessing/src/main/resources/output/";
         String patternForm = "\\Aorders\\d\\d.xml\\z";
         //Creating new writeXmlFile service
-        WriteXmlFile writeXmlFile = new WriteXmlFileImpl();
+        WriteXmlFile writeXmlFile = new WriteXmlFileImpl(outputDirPath);
         //Creating new readXmlFile service and injecting the writer to it
         ReadXmlFile readXmlFile = new ReadXmlFileImpl(writeXmlFile);
         //Creating new directoryWatcher and injecting the reader to it

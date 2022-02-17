@@ -18,7 +18,7 @@ public class ReadXmlFileImpl implements ReadXmlFile {
         this.writeXmlFile = writeXmlFile;
     }
 
-    public void read(String filePath){
+    public void read(String filePath, int orderNum){
         try {
 
             File file = new File(filePath);
@@ -30,7 +30,8 @@ public class ReadXmlFileImpl implements ReadXmlFile {
             HashMap<String, List<Product>> productsBySupplier = new HashMap<>();
 
             //Extracting the order number from the file
-            int orderNum = Integer.parseInt(filePath.replaceAll("[^\\d]", ""));
+
+//            int orderNum = Integer.parseInt(filePath.replaceAll("[^\\d]", ""));
 
             List<Order> ordersList = orders.getOrders();
 

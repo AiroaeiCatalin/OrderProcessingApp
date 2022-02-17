@@ -77,8 +77,8 @@ Here you can see some prints from the app: </br>
 <!-- Proposed solution -->
 ## Proposed solution
 The solution I aproached was firstly to watch the input directory where we drop the files, I have done this 
-with the help of the WatchService. After we detect a new file we then check if the naming follows the right pattern(i.e: orders##.xml), and if it does we then pass the file path to the reader
-where we unmarshall the xml file with the help of the JAXB library and create the objects for the order and the product and then we manage them, we extract the order's number, 
+with the help of the WatchService. After we detect a new file we then check if the naming follows the right pattern(i.e: orders##.xml), and if it does we then extract the order's number from 
+the file's name and pass it toghether with the file path to the reader where we unmarshall the xml file with the help of the JAXB library and create the objects for the order and the product and then we manage them,
 we sort them and we create a HashMap with the key being the supplier and the value
 a list with the objects from that supplier and pass this hashmap and the order number to the writer where we just marshall the objects and create the xml in the output folder.
 </br>

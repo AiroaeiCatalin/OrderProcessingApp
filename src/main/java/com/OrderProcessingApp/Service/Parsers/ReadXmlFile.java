@@ -1,5 +1,5 @@
 package com.OrderProcessingApp.Service.Parsers;
 
 public interface ReadXmlFile {
-    public void read(String filePath);
+    public void read(String filePath, int orderNum);
 }

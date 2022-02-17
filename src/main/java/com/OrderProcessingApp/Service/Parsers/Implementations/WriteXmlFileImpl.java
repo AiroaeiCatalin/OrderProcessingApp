@@ -14,6 +14,12 @@ import java.util.Map;
 
 public class WriteXmlFileImpl implements WriteXmlFile {
 
+    private String outputDirPath;
+
+    public WriteXmlFileImpl(String outputDirPath) {
+        this.outputDirPath = outputDirPath;
+    }
+
     public void write(HashMap<String, List<Product>> productsBySupplier, int orderNum)  {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Products.class);
@@ -28,7 +34,7 @@ public class WriteXmlFileImpl implements WriteXmlFile {
                 products.setProducts(entry.getValue());
 
                 String supplier = entry.getKey();
-                String filePath = String.format("../SacomOrdersProcessing/src/main/resources/output/%s%d.xml", supplier, orderNum);
+                String filePath = String.format("%s%s%d.xml", outputDirPath, supplier, orderNum);
                 //Marshal the employees list in file
                 jaxbMarshaller.marshal(products, new File(filePath));
                 System.out.println("New file created: " + filePath);
