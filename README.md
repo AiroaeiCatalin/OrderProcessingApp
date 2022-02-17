@@ -54,10 +54,10 @@ JAXB for the XML marshalling and unmarshalling
 <!-- How to run the app -->
 ## How to run the app
 
-###Getting started
+### Getting started
 This application can be tested by opening the project through the pom.xml and installing all additional libraries from Maven, in our case the JAXB.
 
-###Usage
+### Usage
 
 After installing all the additional libraries you can just run the app and it will detect if you place a new file inside the resources/input directory and if the file 
 has the right naming format it will convert it to the needed XML supplier files, one for each of the suppliers, that contain the products from that specific supplier.
@@ -75,7 +75,7 @@ Here you can see some prints from the app: </br>
 
 
 <!-- Proposed solution -->
-##Proposed solution
+## Proposed solution
 The solution I aproached was firstly to watch the input directory where we drop the files, I have done this 
 with the help of the WatchService. After we detect a new file we then check if the naming follows the right pattern(i.e: orders##.xml), and if it does we then pass the file path to the reader
 where we unmarshall the xml file with the help of the JAXB library and create the objects for the order and the product and then we manage them, we extract the order's number, 
