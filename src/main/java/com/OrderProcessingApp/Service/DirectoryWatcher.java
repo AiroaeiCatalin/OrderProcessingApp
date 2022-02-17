@@ -52,6 +52,7 @@ public class DirectoryWatcher {
         }
     }
 
+
     private boolean checkPattern(Path eventPath) {
         Pattern pattern = Pattern.compile(this.patternForm);
         Matcher matcher = pattern.matcher(eventPath.toString());

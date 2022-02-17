@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <products>
     <product>
+        <description>Apple MacBook Pro 16"</description>
+        <gtin>00885909464045</gtin>
+        <price currency="USD">2000.0</price>
+        <orderid>2345</orderid>
+    </product>
+    <product>
         <description>Apple iPad 2 with Wi-Fi 16GB - iOS 5 - Black</description>
         <gtin>00885909464517</gtin>
         <price currency="USD">399.0</price>

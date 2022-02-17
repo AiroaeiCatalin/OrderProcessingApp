@@ -19,13 +19,6 @@ public class WriteXmlFileImpl implements WriteXmlFile {
             JAXBContext jaxbContext = JAXBContext.newInstance(Products.class);
             //Creating marshaller
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-//            jaxbMarshaller.setProperty("com.sun.xml.bind.xmlDeclaration", false);
-//            jaxbMarshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
-//            jaxbMarshaller.setProperty("xmlHeaders", "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>");
-
-
-
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
             Products products = new Products();

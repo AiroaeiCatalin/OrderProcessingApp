@@ -36,6 +36,7 @@ public class ReadXmlFileImpl implements ReadXmlFile {
 
             //Sort orders list descending so the latest products are always first
             ordersList.sort(Collections.reverseOrder());
+
             //creating hashMap with products lists
             productsBySupplier = createHashMap(ordersList);
             writeXmlFile.write(productsBySupplier, orderNum);

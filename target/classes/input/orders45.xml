@@ -34,4 +34,12 @@
             <supplier>Panasonic</supplier>
         </product>
     </order>
+    <order created='2012-07-14T16:02:22.000' ID='2345'>
+        <product>
+            <description>Apple MacBook Pro 16"</description>
+            <gtin>00885909464045</gtin>
+            <price currency="USD">2000</price>
+            <supplier>Apple</supplier>
+        </product>
+    </order>
 </orders>
